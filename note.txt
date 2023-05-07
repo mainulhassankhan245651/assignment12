@@ -1,0 +1,123 @@
+
+
+
+Deployed link of  website :  https://mainulhassankhan.000webhostapp.com/
+
+
+
+Part 1: Building the BMI Calculator
+
+1.Create an HTML file named "index.html" and add the following code:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <form>
+      <label for="weightInput">Weight (kg):</label>
+      <input type="number" id="weightInput" />
+      <br />
+      <label for="heightInput">Height (cm):</label>
+      <input type="number" id="heightInput" />
+      <br />
+      <button type="button" id="calculateBtn">Calculate BMI</button>
+    </form>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+2. Create a JavaScript file named "script.js" and add the following code:
+
+const calculateBMI = () => {
+  const weight = document.getElementById("weightInput").value;
+  const height = document.getElementById("heightInput").value / 100;
+  const bmi = weight / (height * height);
+
+  document.getElementById(
+    "result"
+  ).innerHTML = `Your BMI is ${bmi.toFixed(2)}`;
+};
+
+document.getElementById("calculateBtn").addEventListener("click", () => {
+  calculateBMI();
+});
+
+3. Open the HTML file in your browser and test the BMI calculator.
+
+
+Part 2: Styling the BMI Calculator
+
+1.  Create a CSS file named "style.css" and add the following code:
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1587613860803-ec54e39f1b5d");
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #6d8c88;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: #568f8a;
+}
+
+#result {
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+2.  Add the following code to the head section of the HTML file to link the CSS file:
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+3.  Open the HTML file in your browser and check the styling of the BMI calculator.
+
+Part 3: Deploying to Netlify
+
+1.  Create a new repository on GitHub and push the index.html, script.js, style.css, and note.txt files to it
+
+
+
+
